@@ -1,0 +1,162 @@
+body {
+    background-color: #f2f0e8; /* Light beige background for a vintage feel */
+    font-family: 'Georgia', serif; /* Classic serif font for a vintage look */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Style for the active class */
+.event.active {
+    background-color: #f0f0f0;  /* Light gray background */
+    border: 2px solid #007BFF; /* Blue border for visual indication */
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Optional - Add hover effect */
+.event:hover {
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #2c2a27; /* Deep brown for header */
+    color: #e7e4d7; /* Off-white text color */
+    padding: 20px; /* Padding for header */
+    text-align: center; /* Center align text */
+    font-size: 2em; /* Larger font for the header */
+    border-bottom: 5px solid #c2b280; /* Decorative bottom border */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+nav {
+    background-color: #4b3d3a; /* Darker brown for navigation */
+    padding: 10px; /* Padding for nav */
+}
+
+@media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+
+nav ul li {
+    display: inline; /* Display items inline */
+    margin-right: 20px; /* Spacing between links */
+}
+
+nav ul li a {
+    color: #e7e4d7; /* Off-white text color for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold links for emphasis */
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+nav ul li a:hover {
+    color: #c2b280; /* Change color on hover */
+}
+
+.intro-bg {
+    background-image: url('https://i.pinimg.com/originals/eb/0f/2f/eb0f2f7e0f9210c5fe9ca2b73929ee09.jpg'); /* Updated background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    height: 800px; /* Set height for the section */
+    color: #e7e4d7; /* Off-white text color for content inside */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-shadow: 1px 1px 2px black; /* Add text shadow for readability */
+    border: 5px solid #c2b280; /* Decorative border around section */
+    margin: 10px; /* Margin for spacing */
+}
+
+footer {
+    background-color: #2c2a27; /* Deep brown for footer */
+    color: #e7e4d7; /* Off-white text color */
+    text-align: center; /* Center align text */
+    padding: 10px; /* Padding for footer */
+    position: relative; /* Allows footer to be positioned correctly */
+    bottom: 0; /* Aligns the footer to the bottom */
+    width: 100%; /* Full width */
+    font-size: 0.9em; /* Slightly smaller font for footer */
+}
+
+/* Additional styling for sections */
+section {
+    padding: 20px; /* Padding for sections */
+    margin: 10px; /* Margin for spacing */
+    background-color: #ffffff; /* White background for sections */
+    border: 1px solid #c2b280; /* Light border for sections */
+    border-radius: 8px; /* Rounded corners for sections */
+}
+
+/* Image styles */
+.project-img {
+    width: 100%; /* Scale images to full width of the section */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Optional: limit max width */
+    display: block; /* Center images */
+    margin: 0 auto; /* Center images horizontally */
+}
+#timeline {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+}
+
+.timeline-event {
+    background: #ffffff;
+    padding: 15px;
+    border-left: 4px solid #0078d4;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.timeline-event:hover {
+    background: #e6f7ff;
+    transform: scale(1.03);
+}
+
+.timeline-event h3 {
+    margin: 0;
+    color: #0078d4;
+}
+
+.timeline-event p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.timeline-event[data-year]:before {
+    content: attr(data-year);
+    font-weight: bold;
+    color: #ffffff;
+    background: #0078d4;
+    border-radius: 50%;
+    padding: 8px 12px;
+    position: absolute;
+    left: -40px;
+    top: 15px;
+    transform: translateY(-50%);
+}
